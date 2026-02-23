@@ -9,6 +9,7 @@ app_version = "0.1.0"
 # Website
 website_route_rules = [
     {"from_route": "/pdf-studio/<path:app_path>", "to_route": "pdf-studio"},
+    {"from_route": "/pdf-studio", "to_route": "pdf-studio"},
 ]
 
 # DocTypes

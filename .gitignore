@@ -10,9 +10,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.egg-info/
-dist/
 build/
 *.egg
+
+# Vite frontend build output (committed for Frappe Cloud deployment)
+!pdf_suite/public/dist/
 
 # OS
 .DS_Store

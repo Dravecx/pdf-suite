@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Studio</title>
-    <link rel="icon" type="image/svg+xml" href="/assets/pdf_suite/dist/favicon.svg">
-    <!-- Styles injected by Vite build -->
-    {{ web_include_css }}
-</head>
-<body>
-    <div id="pdf-studio-app"></div>
-    <!-- Scripts injected by Vite build -->
-    {{ web_include_js }}
-</body>
-</html>
+{%- block head_include %}
+<title>PDF Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" crossorigin href="/assets/pdf_suite/dist/index-BTuHyoL7.css">
+  <script type="module" crossorigin src="/assets/pdf_suite/dist/index-B6eq8TuP.js"></script>
+{%- endblock %}
+
+{%- block page_content %}
+<div id="app"></div>
+{%- endblock %}

@@ -37,6 +37,21 @@ const routes = [
     component: () => import('./pages/TemplatePage.vue'),
   },
   {
+    path: '/templates/new',
+    name: 'template-new',
+    component: () => import('./components/template/TemplateEditor.vue'),
+  },
+  {
+    path: '/templates/:name/edit',
+    name: 'template-edit',
+    component: () => import('./components/template/TemplateEditor.vue'),
+  },
+  {
+    path: '/templates/:name/generate',
+    name: 'template-generate',
+    component: () => import('./components/template/TemplateGenerator.vue'),
+  },
+  {
     path: '/batch',
     name: 'batch',
     component: () => import('./pages/BatchPage.vue'),

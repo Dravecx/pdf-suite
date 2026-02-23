@@ -85,6 +85,7 @@ export function usePdfApi() {
     htmlToPdf: (html, outputName) => callApi('convert.html_to_pdf', { html_content: html, output_filename: outputName }),
 
     // Document sessions
+    exportEdited: (fileUrl, textMods, outputName) => callApi('document.export_edited_pdf', { file_url: fileUrl, text_modifications: textMods, output_filename: outputName }),
     saveSession: (fileUrl, annotations, mods, name) => callApi('document.save_edit_session', { file_url: fileUrl, annotations, page_modifications: mods, session_name: name }),
     loadSession: (name) => callApi('document.load_edit_session', { session_name: name }),
     listSessions: () => callApi('document.list_edit_sessions', {}, 'GET'),
@@ -94,6 +95,7 @@ export function usePdfApi() {
     getTemplate: (name) => callApi('template.get_template', { template_name: name }, 'GET'),
     listTemplates: () => callApi('template.list_templates', {}, 'GET'),
     deleteTemplate: (name) => callApi('template.delete_template', { template_name: name }),
+    generateHtmlPdf: (templateName, variableData, outputFilename) => callApi('template.generate_html_pdf', { template_name: templateName, variable_data: JSON.stringify(variableData), output_filename: outputFilename || '' }),
 
     // Batch
     startBatch: (operation, fileUrls, options) => callApi('batch.start_batch', { operation, file_urls: fileUrls, options }),
