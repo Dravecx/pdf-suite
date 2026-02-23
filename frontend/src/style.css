@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PDF Studio base styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+#pdf-studio-app {
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Canvas container */
+.pdf-canvas-container {
+  position: relative;
+  display: inline-block;
+}
+
+.pdf-canvas-container canvas {
+  display: block;
+}
+
+/* Fabric.js overlay */
+.fabric-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto;
+}
+
+/* Thumbnail active state */
+.thumbnail-active {
+  ring: 2px;
+  ring-color: theme('colors.brand.500');
+}

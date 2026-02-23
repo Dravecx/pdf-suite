@@ -1,0 +1,84 @@
+{
+    "name": "PDF Batch Job",
+    "module": "PDF Suite",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "is_submittable": 0,
+    "istable": 0,
+    "issingle": 0,
+    "editable_grid": 1,
+    "track_changes": 0,
+    "autoname": "hash",
+    "fields": [
+        {
+            "fieldname": "operation",
+            "fieldtype": "Select",
+            "label": "Operation",
+            "options": "merge\nsplit\ncompress\nwatermark\nocr\nconvert",
+            "reqd": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "label": "Status",
+            "options": "Queued\nProcessing\nCompleted\nFailed",
+            "default": "Queued",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "total_files",
+            "fieldtype": "Int",
+            "label": "Total Files",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "processed_files",
+            "fieldtype": "Int",
+            "label": "Processed Files",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "file_urls",
+            "fieldtype": "Long Text",
+            "label": "File URLs",
+            "description": "JSON array of source file URLs"
+        },
+        {
+            "fieldname": "options",
+            "fieldtype": "Long Text",
+            "label": "Options",
+            "description": "JSON object of operation options"
+        },
+        {
+            "fieldname": "results",
+            "fieldtype": "Long Text",
+            "label": "Results",
+            "description": "JSON array of operation results"
+        },
+        {
+            "fieldname": "error_message",
+            "fieldtype": "Small Text",
+            "label": "Error Message"
+        }
+    ],
+    "permissions": [
+        {
+            "role": "System Manager",
+            "read": 1,
+            "write": 1,
+            "create": 1,
+            "delete": 1
+        },
+        {
+            "role": "All",
+            "read": 1,
+            "write": 1,
+            "create": 1,
+            "delete": 0,
+            "if_owner": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

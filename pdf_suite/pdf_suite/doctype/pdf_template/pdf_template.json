@@ -1,0 +1,58 @@
+{
+    "name": "PDF Template",
+    "module": "PDF Suite",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "is_submittable": 0,
+    "istable": 0,
+    "issingle": 0,
+    "editable_grid": 1,
+    "track_changes": 1,
+    "autoname": "field:template_name",
+    "fields": [
+        {
+            "fieldname": "template_name",
+            "fieldtype": "Data",
+            "label": "Template Name",
+            "reqd": 1,
+            "unique": 1,
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Small Text",
+            "label": "Description"
+        },
+        {
+            "fieldname": "base_pdf",
+            "fieldtype": "Data",
+            "label": "Base PDF",
+            "description": "URL of the base PDF file for this template"
+        },
+        {
+            "fieldname": "schema",
+            "fieldtype": "Long Text",
+            "label": "Schema",
+            "description": "JSON pdfme template schema"
+        }
+    ],
+    "permissions": [
+        {
+            "role": "System Manager",
+            "read": 1,
+            "write": 1,
+            "create": 1,
+            "delete": 1
+        },
+        {
+            "role": "All",
+            "read": 1,
+            "write": 1,
+            "create": 1,
+            "delete": 0,
+            "if_owner": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}
