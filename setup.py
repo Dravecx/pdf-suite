@@ -18,5 +18,6 @@ setup(
         "pdf2docx>=0.5.8",
         "python-docx>=1.0.0",
         "Pillow>=10.0.0",
+        "weasyprint>=62.0",
     ],
 )
